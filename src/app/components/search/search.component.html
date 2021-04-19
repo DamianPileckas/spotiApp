@@ -5,14 +5,7 @@
 </div>
 
 <div class="container">
-    <div class="row justify-content-md-center m-5   ">
-        <div class="col-lg-3" *ngFor="let artista of artistas">
-            <div class="card" *ngIf="artista !== null">
-                <img *ngIf="artista.images.length > 0" [src]="artista.images[0].url" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">{{artista.name}}</h5>
-                </div>
-            </div>
-        </div>
+    <div class="d-flex flex-wrap">
+        <app-tarjetas class="m-4" [items]="artistas"></app-tarjetas>
     </div>
 </div>
