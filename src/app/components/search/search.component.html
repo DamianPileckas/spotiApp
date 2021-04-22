@@ -4,8 +4,10 @@
     </div>
 </div>
 
+<app-loading class="m-5" *ngIf="loading"></app-loading>
+
 <div class="container">
     <div class="d-flex flex-wrap">
-        <app-tarjetas class="m-4" [items]="artistas"></app-tarjetas>
+        <app-tarjetas *ngIf="!loading" class="m-4" [items]="artistas"></app-tarjetas>
     </div>
 </div>
